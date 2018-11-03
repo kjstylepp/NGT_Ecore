@@ -17,5 +17,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//ClassifierViewPoint/qualityRisk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//ClassifierViewPoint/coverage"/>
     </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
+    <genClasses ecoreClass="ngt.ecore#//Inheritance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/superClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/subClass"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -8,4 +8,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualityRisk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coverage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" lowerBound="1"
+        eType="#//ClassifierViewPoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subClass" lowerBound="1"
+        eType="#//ClassifierViewPoint" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
