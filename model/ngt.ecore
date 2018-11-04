@@ -7,12 +7,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="testCasesNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualityRisk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coverage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inheritedBy" upperBound="-1"
+        eType="#//Inheritance" eOpposite="#//Inheritance/superClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inherit" eType="#//Inheritance"
+        eOpposite="#//Inheritance/subClass"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" lowerBound="1"
-        eType="#//ClassifierViewPoint" containment="true"/>
+        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inheritedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subClass" lowerBound="1"
-        eType="#//ClassifierViewPoint" containment="true"/>
+        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inherit"
+        eKeys="#//ClassifierViewPoint/name"/>
   </eClassifiers>
 </ecore:EPackage>

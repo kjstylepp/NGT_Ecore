@@ -16,11 +16,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//ClassifierViewPoint/testCasesNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//ClassifierViewPoint/qualityRisk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//ClassifierViewPoint/coverage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/inheritedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/inherit"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/superClass"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/subClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/superClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Inheritance/subClass"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
