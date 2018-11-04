@@ -23,11 +23,14 @@
         eType="#//Sequence" eOpposite="#//Sequence/posterority"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relate" upperBound="-1"
         eType="#//General" eOpposite="#//General/element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="regard" upperBound="-1"
+        eType="#//Frame" eOpposite="#//Frame/element"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="superClass" lowerBound="1"
-        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inheritedBy"/>
+        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inheritedBy"
+        eKeys="#//ClassifierViewPoint/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="subClass" lowerBound="1"
         eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inherit"
         eKeys="#//ClassifierViewPoint/name"/>
@@ -36,7 +39,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//ClassifierViewPoint"
         eOpposite="#//ClassifierViewPoint/consist" eKeys="#//ClassifierViewPoint/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
-        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/compose"/>
+        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/compose"
+        eKeys="#//ClassifierViewPoint/name"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Combination" eSuperTypes="#//RelationViewPoint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="combinationNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -57,6 +61,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="General" eSuperTypes="#//RelationViewPoint">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mame" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="2"
-        upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/relate"/>
+        upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/relate"
+        eKeys="#//ClassifierViewPoint/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Frame" eSuperTypes="#//RelationViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="2"
+        upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/regard"
+        eKeys="#//ClassifierViewPoint/name"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -24,6 +24,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/priorTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/posteriorTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/relate"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/regard"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
@@ -47,6 +48,9 @@
     <genClasses ecoreClass="ngt.ecore#//General">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//General/mame"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//General/element"/>
+    </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//Frame">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Frame/element"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
