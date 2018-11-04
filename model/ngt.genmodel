@@ -21,6 +21,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/consist"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/compose"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/combine"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/priorTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/posteriorTo"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
@@ -36,6 +38,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/qualityRisk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/coverage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Combination/element"/>
+    </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//Sequence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Sequence/priority"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Sequence/posterority"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
