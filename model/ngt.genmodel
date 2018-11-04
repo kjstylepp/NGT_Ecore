@@ -20,6 +20,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/inherit"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/consist"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/compose"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/combine"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
@@ -29,6 +30,12 @@
     <genClasses ecoreClass="ngt.ecore#//Composite">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Composite/owner"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Composite/property"/>
+    </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//Combination">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/combinationNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/qualityRisk"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/coverage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Combination/element"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

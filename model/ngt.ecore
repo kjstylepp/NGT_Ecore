@@ -15,6 +15,8 @@
         eType="#//Composite" eOpposite="#//Composite/owner"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compose" eType="#//Composite"
         eOpposite="#//Composite/property"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="combine" upperBound="-1"
+        eType="#//Combination" eOpposite="#//Combination/element"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
@@ -29,5 +31,12 @@
         eOpposite="#//ClassifierViewPoint/consist" eKeys="#//ClassifierViewPoint/name"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/compose"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Combination" eSuperTypes="#//RelationViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="combinationNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualityRisk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coverage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="2"
+        upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/combine"/>
   </eClassifiers>
 </ecore:EPackage>
