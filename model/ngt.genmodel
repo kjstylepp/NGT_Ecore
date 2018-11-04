@@ -25,6 +25,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/posteriorTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/relate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/regard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/belongTo"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
@@ -51,6 +52,14 @@
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//Frame">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Frame/element"/>
+    </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Container/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Container/containViewPoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Container/containContainer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Container/belongTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Container/priorTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Container/posteriorTo"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
