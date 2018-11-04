@@ -16,11 +16,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="compose" eType="#//Composite"
         eOpposite="#//Composite/property"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="combine" upperBound="-1"
-        eType="#//Combination" eOpposite="#//Combination/element"/>
+        eType="#//Combination" eOpposite="#//Combination/factor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="priorTo" upperBound="-1"
         eType="#//Sequence" eOpposite="#//Sequence/priority"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="posteriorTo" upperBound="-1"
         eType="#//Sequence" eOpposite="#//Sequence/posterority"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relate" upperBound="-1"
+        eType="#//General" eOpposite="#//General/element"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
@@ -40,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="combinationNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualityRisk" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="coverage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="2"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="factor" lowerBound="2"
         upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/combine"
         eKeys="#//ClassifierViewPoint/name"/>
   </eClassifiers>
@@ -51,5 +53,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="posterority" lowerBound="1"
         eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/posteriorTo"
         eKeys="#//ClassifierViewPoint/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="General" eSuperTypes="#//RelationViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mame" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" lowerBound="2"
+        upperBound="2" eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/relate"/>
   </eClassifiers>
 </ecore:EPackage>

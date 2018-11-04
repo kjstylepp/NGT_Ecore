@@ -23,6 +23,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/combine"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/priorTo"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/posteriorTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//ClassifierViewPoint/relate"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//RelationViewPoint"/>
     <genClasses ecoreClass="ngt.ecore#//Inheritance">
@@ -37,11 +38,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/combinationNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/qualityRisk"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//Combination/coverage"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Combination/element"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Combination/factor"/>
     </genClasses>
     <genClasses ecoreClass="ngt.ecore#//Sequence">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Sequence/priority"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//Sequence/posterority"/>
+    </genClasses>
+    <genClasses ecoreClass="ngt.ecore#//General">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ngt.ecore#//General/mame"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ngt.ecore#//General/element"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
