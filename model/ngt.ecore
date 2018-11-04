@@ -11,6 +11,10 @@
         eType="#//Inheritance" eOpposite="#//Inheritance/superClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inherit" eType="#//Inheritance"
         eOpposite="#//Inheritance/subClass"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consist" upperBound="-1"
+        eType="#//Composite" eOpposite="#//Composite/owner"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compose" eType="#//Composite"
+        eOpposite="#//Composite/property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RelationViewPoint" abstract="true" eSuperTypes="#//ViewPoint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Inheritance" eSuperTypes="#//RelationViewPoint">
@@ -19,5 +23,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="subClass" lowerBound="1"
         eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/inherit"
         eKeys="#//ClassifierViewPoint/name"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//RelationViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//ClassifierViewPoint"
+        eOpposite="#//ClassifierViewPoint/consist" eKeys="#//ClassifierViewPoint/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        eType="#//ClassifierViewPoint" eOpposite="#//ClassifierViewPoint/compose"/>
   </eClassifiers>
 </ecore:EPackage>
